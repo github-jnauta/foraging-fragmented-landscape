@@ -96,7 +96,6 @@ class System(object):
         L = 2**args.maxlevel 
         lattice = landscapes.SpectralSynthesis2D(L, args.H)
         landscape = landscapes.binary_lattice(lattice, args.f)
-        print("Generated landscape, running foraging...")
         # Run 
         output = nb_forage_Levy_flight(args.K, landscape, args.alpha, args.reps)
         # Return output as dictionary

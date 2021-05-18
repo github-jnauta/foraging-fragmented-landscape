@@ -63,3 +63,12 @@ class Args():
         
         # Parse arguments
         self.args = parser.parse_args()
+
+        # Add variable for 'pretty' print purposes
+        self.argdict = {
+            'L': 2**self.args.maxlevel, 
+            'K': self.args.K,
+            'H': self.args.H,
+            'f': self.args.f,
+            'alpha': self.args.alpha
+        }
