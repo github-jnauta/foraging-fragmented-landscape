@@ -31,7 +31,7 @@ if __name__ == "__main__":
     print("Computations finished for %s\n approx. time: %s"%(printstr, timestr))
     if args.save:    
         # Determine suffix for saving 
-        suffix = "_L%(L)ixL%(L)i_K%(K)i_H%(H).3f_f%(f).3f_a%(alpha).3f_seed%i"%(Argus.argdict)
+        suffix = "_L%(L)ixL%(L)i_K%(K)i_H%(H).3f_f%(f).3f_a%(alpha).3f_seed%(seed)i"%(Argus.argdict)
         for key, item in output.items():
             np.save(args.ddir+"%s%s"%(key, suffix), item)
     else:
