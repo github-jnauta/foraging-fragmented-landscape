@@ -21,7 +21,7 @@ if __name__ == "__main__":
     output = System.run_flight(args) 
 
     # Save or print output
-    printstr = "L%(L)ixL%(L)i, H=%(H).2f, f=%(f).2f, \u03B1=%(alpha).2f, K=%(K)i"%(
+    printstr = "L%(L)ixL%(L)i, H=%(H).2f, f=%(f).2f, \u03B1=%(alpha).2f, K=%(K)i, seed %(seed)i"%(
         Argus.argdict
     )
     seconds = time.time() - starttime
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     print("Computations finished for %s\n approx. time: %s"%(printstr, timestr))
     if args.save:    
         # Determine suffix for saving 
-        suffix = "_L%(L)ixL%(L)i_K%(K)i_H%(H).3f_f%(f).3f_a%(alpha).3f"%(Argus.argdict)
+        suffix = "_L%(L)ixL%(L)i_K%(K)i_H%(H).3f_f%(f).3f_a%(alpha).3f_seed%i"%(Argus.argdict)
         for key, item in output.items():
             np.save(args.ddir+"%s%s"%(key, suffix), item)
     else:

@@ -70,5 +70,6 @@ class Args():
             'K': self.args.K,
             'H': self.args.H,
             'f': self.args.f,
-            'alpha': self.args.alpha
+            'alpha': self.args.alpha,
+            'seed': self.args.seed
         }
